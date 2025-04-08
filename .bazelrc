@@ -1,0 +1,2 @@
+common --registry=file://%workspace%/third_party/registry
+try-import %workspace%/tools/build/bazel/user.bazelrc

@@ -1,0 +1,12 @@
+load("@npm//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "run_renovate",
+    entry_point = "//tools/renovate:renovate_runner.js",
+    data = [
+        "//:renovate.json",
+        "//:package.json",
+        "//:package-lock.json",
+    ],
+    deps = ["@npm//renovate"],
+)
